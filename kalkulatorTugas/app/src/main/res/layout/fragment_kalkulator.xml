@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.fragmnet.KalkulatorFragment">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <EditText
+        android:id="@+id/angka1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:id="@+id/tv_hasil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/angka1"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/hasil"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:textStyle="bold"/>
+
+
+    <!-- Baris pertama tombol kalkulator -->
+    <LinearLayout
+        android:id="@+id/bar1"
+        android:layout_marginTop="12sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_hasil"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Tombol-tombol angka 1-3 -->
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="0dp"
+            android:textSize="30sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="7" />
+
+        <Button
+            android:id="@+id/button8"
+            android:layout_width="0dp"
+            android:textSize="30sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="8" />
+
+        <Button
+            android:id="@+id/button9"
+            android:layout_width="0dp"
+            android:textSize="30sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="9" />
+        <Button
+            android:id="@+id/buttonTambah"
+            android:layout_width="0dp"
+            android:textSize="30sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="+"/>
+
+    </LinearLayout>
+
+    <!-- Baris kedua tombol kalkulator -->
+    <LinearLayout
+        android:id="@+id/bar2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bar1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- Tombol-tombol angka 4-6 -->
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="0dp"
+            android:textSize="30sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="4" />
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="0dp"
+            android:textSize="30sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="5" />
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="0dp"
+            android:textSize="30sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="6" />
+        <Button
+            android:id="@+id/buttonKali"
+            android:layout_width="0dp"
+            android:textSize="30sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="x"/>
+
+    </LinearLayout>
+
+    <!-- Baris ketiga tombol kalkulator -->
+    <LinearLayout
+        android:id="@+id/bar3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bar2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- Tombol-tombol angka 7-9 -->
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="30sp"
+            android:text="1" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="30sp"
+            android:text="2" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="30sp"
+            android:text="3" />
+        <Button
+            android:id="@+id/buttonkurang"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="30sp"
+            android:text="-"/>
+
+    </LinearLayout>
+
+    <!-- Baris terakhir tombol kalkulator (0 dan tombol desimal) -->
+    <LinearLayout
+        android:id="@+id/bar4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bar3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- Tombol angka 0 -->
+        <Button
+            android:id="@+id/button0"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="30sp"
+            android:text="0" />
+
+        <!-- Tombol desimal (.) -->
+        <Button
+            android:id="@+id/buttonTitik"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="30sp"
+            android:text="." />
+        <Button
+            android:id="@+id/button00"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="30sp"
+            android:text="00"/>
+        <Button
+            android:id="@+id/buttonBagi"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="30sp"
+            android:text="/"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/bar5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bar4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- Tombol angka 0 -->
+        <Button
+            android:id="@+id/backspace"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="30sp"
+            android:text="backspace" />
+
+        <!-- Tombol desimal (.) -->
+        <Button
+            android:id="@+id/btn_samadengan"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="30sp"
+            android:text="=" />
+    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
